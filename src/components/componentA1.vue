@@ -6,19 +6,19 @@
 
     
 
-    <div class="container-1" v-if="view === 1">
+    <div class="container-1" v-show="view === 1">
         <p>Hello World</p>
         <p>資料綁定(單向綁定)</p>
         {{data}}
     </div>
 
-    <div class="container-2" v-else-if="view === 2">
+    <div class="container-2" v-show="view === 2">
         <p>資料綁定(雙向綁定)</p>
         <input type="text" v-model="text" />
         <p>{{text}}</p>
     </div>
 
-    <div v-else>
+    <div v-show="view !== 1 && view !== 2">
         沒畫面
     </div>
 </template>
